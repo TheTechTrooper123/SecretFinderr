@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secretfinderr"
+version = "0.1.0"
+description = "Local, AI-free secrets scanner for code repositories and git history"
+authors = [{name = "Till", email = "till@siskos.org"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["security", "secrets", "scanner", "git", "credentials", "cli"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Topic :: Software Development :: Version Control :: Git",
+]
+
+[project.urls]
+Homepage = "https://github.com/TheTechTrooper123/SecretFinderr"
+Repository = "https://github.com/TheTechTrooper123/SecretFinderr"
+Issues = "https://github.com/TheTechTrooper123/SecretFinderr/issues"
+
+[project.scripts]
+secretfinderr = "secretfinderr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["secretfinderr*"]
